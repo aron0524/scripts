@@ -386,3 +386,74 @@ An unexpected error occurred:  There were too many requests of a given type ::  
 文章最后修改日期：2020年4月12日
 
 
+
+
+
+V2Ray windows客户端下载
+==================
+
+#### 作者：[**跳越者**](https://www.hijk.pw/author/admin/) | 日期：2019年12月2日2019年12月2日
+
+**V2Ray**是近几年非常热门的科学上网技术，其采用新的通信协议，因功能强大、能有效抵抗墙的干扰而广受网友的喜爱。**V2Ray官方网址**是：[https://v2ray.com](https://v2ray.com)，目前已被墙无法直接打开。
+
+[
+
+![v2ray logo](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)
+
+![v2ray logo](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)
+
+v2ray logo
+
+V2Ray核心不区分客户端和服务端，因此V2Ray官方未提供各平台的GUI客户端。许多第三方开发人员基于V2Ray核心开发了适用于各平台的GUI客户端，因此每个平台均有多个客户端可供选择。本站提供主流最新版v2ray windows客户端的本地高速下载。
+
+* * *
+
+**最新版v2ray Windows客户端下载链接**：
+----------------------------
+
+*   V2RayN：       [v2rayN-v3.15.2.zip](https://netfiles.pw/download.php?filename=/v2/windows/v2rayN-v3.15.2.zip)                           [官网下载](https://github.com/2dust/v2rayN/releases)           [配置教程](https://www.hijk.pw/v2rayn-config-tutorial/)
+*   V2RayW：       [v2rayW-v1.0.0-beta2](https://netfiles.pw/download.php?filename=/v2/windows/v2rayW-v1.0.0-beta2.zip)                      [官网下载](https://github.com/Cenmrev/V2RayW/releases)           [配置教程](https://www.hijk.pw/v2rayw-config-tutorial/)
+*   V2RayS：       [v2rayS-v1.0.0.3](https://netfiles.pw/download.php?filename=/v2/windows/v2rayS-v1.0.0.3.zip)                               [官网下载](https://github.com/Shinlor/V2RayS/releases)           [配置教程](https://www.hijk.pw/v2rays-config-tutorial/)
+*   Clash：           [Clash.for.windows-0.9.6-win.7z](https://netfiles.pw/download.php?filename=/v2/windows/Clash.for.Windows-0.9.6-win.7z)      [官网下载](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+*   Mellow：        [Mellow.Setup.0.1.17.exe](https://netfiles.pw/download.php?filename=/v2/windows/Mellow.Setup.0.1.17.exe)                 [官网下载](https://github.com/mellow-io/mellow/releases)
+*   Qv2ray：       [Qv2ray.v2.3.2.Windows.7z](https://netfiles.pw/download.php?filename=/v2/windows/Qv2ray.v2.3.2.Windows-x86.7z)              [官网下载](https://github.com/Qv2ray/Qv2ray/releases)
+
+**Windows系统建议使用V2rayN**，界面简洁大气且支持Vmess和Shadowsocks。V2rayW界面配置不支持SS，V2rayS不支持高级传输层设置。Clash基于Yaml语法且纯英文界面，对Clash不了解或新手不建议使用。
+
+注意：下载客户端后需要配置服务端信息才能科学上网！获取服务端信息请参考：[获取科学上网服务端信息](https://www.hijk.pw/get-proxy-info/)
+
+文章最后修改日期：2020年4月19日
+
+
+
+V2Ray安卓客户端下载
+============
+
+#### 作者：[**跳越者**](https://www.hijk.pw/author/admin/) | 日期：2019年12月3日2019年12月3日
+**V2Ray**是近几年非常热门的科学上网技术，其采用新的通信协议，因功能强大、能有效抵抗墙的干扰而广受网友的喜爱。**V2Ray官方网址**是：[https://v2ray.com](https://v2ray.com)，目前已被墙无法直接打开。
+
+[
+
+![v2ray logo](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)
+
+![v2ray logo](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)](https://www.hijk.pw/wp-content/uploads/2019/12/v2ray.jpeg)
+
+v2ray logo
+
+V2Ray核心不区分客户端和服务端，因此V2Ray官方未提供各平台的GUI客户端。许多第三方开发人员基于V2Ray核心开发了适用于各平台的GUI客户端，因此每个平台均有多个客户端可供选择。本站提供最新版的v2ray安卓客户端下载。
+
+* * *
+
+最新版V2Ray安卓版下载链接：
+----------------
+
+*   V2RayNG：        [v2rayNG-v1.2.5.apk](https://netfiles.pw/download.php?filename=/v2/android/v2rayNG-v1.2.5.apk)                 [官网下载](https://github.com/2dust/v2rayNG/releases)      [配置教程](https://www.hijk.pw/v2rayng-config-tutorial/)
+*   Kitsunebi：         [Kitsunebi\_v1.8.0.apk](https://netfiles.pw/download.php?filename=/v2/android/Kitsunebi_v1.8.0.apk)               [上游下载](https://apkpure.com/kitsunebi/fun.kitsunebi.kitsunebi4android)      [配置教程](https://www.hijk.pw/kitsunebi-android-config-tutorial/)
+*   BifrostV：           [bifrostV-v0.6.8.apk](https://netfiles.pw/download.php?filename=/v2/android/bifrostV-v0.6.8.apk)                   [上游下载](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)       [配置教程](https://www.hijk.pw/bifrostv-config-tutorial/)
+
+**注意：**下载客户端后需要配置服务端信息才能科学上网！获取服务端信息请参考：[获取科学上网服务端信息](https://www.hijk.pw/get-proxy-info/)
+
+文章最后修改日期：2020年4月19日
+
+
+
