@@ -488,9 +488,13 @@ v2ray伪装建站教程
 一键修改脚本：
 
 ```
-
-domain\=\`cat /etc/v2ray/config.json | grep Host | cut -d: -f2 | tr -d \\",'  '\` confpath\="/etc/nginx/conf.d/"  if  \[  !  \-f  $confpath${domain}.conf \];  then confpath\="/www/server/panel/vhost/nginx/"  fi sed \-i '28d' ${confpath}${domain}.conf
-nginx \-s reload
+domain=`cat /etc/v2ray/config.json | grep Host | cut -d: -f2 | tr -d \",' '`
+confpath="/etc/nginx/conf.d/"
+if [ ! -f $confpath${domain}.conf ]; then
+  confpath="/www/server/panel/vhost/nginx/"
+fi
+sed -i '28d' ${confpath}${domain}.conf
+nginx -s reload
 
 ```
 接下来，将你的文件上传到 `/usr/share/nginx/html` 文件夹，就可以通过 `https://你的域名/文件路径` 的方式访问上传的网页或者文件了。文件上传操作可参考 [Bitvise连接Linux服务器教程](https://www.hijk.pw/bitvise-connect-linux-server-tutorial/) 或者 [Mac电脑连接Linux教程](https://www.hijk.pw/mac-connect-to-linux-tutorial/)。
