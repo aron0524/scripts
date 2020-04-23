@@ -457,3 +457,89 @@ V2Ray核心不区分客户端和服务端，因此V2Ray官方未提供各平台�
 
 
 
+
+
+
+
+
+
+v2ray伪装建站教程
+===========
+
+#### 作者：[**跳越者**](https://www.hijk.pw/author/admin/) | 日期：2020年3月26日2020年3月26日
+
+根据 [v2ray带伪装一键脚本](https://www.hijk.pw/v2ray-one-click-script-with-mask/) 搭建好梯子后，有些网友想顺便弄个博客玩玩。这完全没问题的，因为搭建博客/网站的必备要素：vps、域名，都已经有了，并且一个像样的网站能让你的ip更不容易被墙。本教程给出v2ray伪装建站的详细过程。
+
+首先，建议网站的主机名用 www 或者 @，即网站是通过 https://www.hijk.pw 或者 https://hijk.pw 这样的形式访问。当然blog、app等主机名也是很好的，访问形式就是 https://blog.hijk.pw、https://app.hijk.pw。
+
+接着域名解析到vps的ip，运行 [v2ray带伪装一键脚本](https://www.hijk.pw/v2ray-one-click-script-with-mask/)  搭建好v2ray，并确保v2ray能在手机、电脑上配置正常使用。
+
+建站技术有很多种，本教程只介绍最常用的三种：静态网站、反向代理网站和WordPress博客。
+
+> 注意：如果你安装过宝塔，请在宝塔面板中修改配置，不要使用本页面中的脚本。
+
+静态网站
+----
+
+静态网站是最简单的网站，既可以上传个人作品/模板做展示站，也可以托管文件当ftp、网盘。
+
+将伪装站从小说站改成静态网站的操作非常简单：编辑 `/etc/nginx/conf.d/你的域名.conf` 文件(你的域名换成真实域名，例如www.hijk.pw)，删除 `proxy_pass  xxxx` 这一行(第28行)，然后**重启Nginx**。
+
+一键修改脚本：
+
+domain\=\`cat /etc/v2ray/config.json | grep Host | cut -d: -f2 | tr -d \\",'  '\` confpath\="/etc/nginx/conf.d/"  if  \[  !  \-f  $confpath${domain}.conf \];  then confpath\="/www/server/panel/vhost/nginx/"  fi sed \-i '28d' ${confpath}${domain}.conf
+nginx \-s reload
+
+接下来，将你的文件上传到 `/usr/share/nginx/html` 文件夹，就可以通过 `https://你的域名/文件路径` 的方式访问上传的网页或者文件了。文件上传操作可参考 [Bitvise连接Linux服务器教程](https://www.hijk.pw/bitvise-connect-linux-server-tutorial/) 或者 [Mac电脑连接Linux教程](https://www.hijk.pw/mac-connect-to-linux-tutorial/)。
+
+反向代理网站
+------
+
+默认的小说站就是反向代理，如果你想换成其他网站，例如百度，把 `/etc/nginx/conf.d/你的域名.conf` 文件的 `proxy_pass  xxxx` 这一行(第28行)改成 `proxy_pass http://www.baidu.com` ，然后**重启Nginx**。
+
+这种建站方式简单粗暴，实践时也有一些坑。例如Nginx不支持反向代理http2的网站，如果后端网站是h2，需要设置 `proxy_http_version 1.1`；后端网站的一些链接可能不是相对路径，需要用 `proxy_redirect` 替换。等等问题本文不再细说，请参考Nginx官方文档。
+
+WordPress博客
+-----------
+
+WordPress是非常流行的建站程序、CMS系统，国外许多知名网站都是用WordPress搭建，本站也是基于WordPress。
+
+WordPress建站需要配置PHP、MySQL/MariaDB，安装和配置过程比较复杂。本人这里提供一个CentOS 7/8的WordPress一键安装脚本，使用方法如下：
+
+bash <(curl \-sL https://raw.githubusercontent.com/hijkpw/scripts/master/wordpress.sh)
+
+脚本运行后会询问你是否继续，按回车键继续，接着脚本会自动运行并配置Nginx。运行成功后输出类似如下的配置信息：
+
+[
+
+![WordPress安装成功](https://www.hijk.pw/wp-content/uploads/2020/03/WordPress安装成功.png)
+
+![WordPress安装成功](data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20671%20271%22%3E%3C/svg%3E)](https://www.hijk.pw/wp-content/uploads/2020/03/WordPress安装成功.png)
+
+WordPress安装成功
+
+接下来，浏览器打开域名，进入WordPress的配置界面：
+
+[
+
+![wordpress配置界面](https://www.hijk.pw/wp-content/uploads/2020/03/wordpress配置界面-1024x728.png)
+
+![wordpress配置界面](data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20750%20533%22%3E%3C/svg%3E)](https://www.hijk.pw/wp-content/uploads/2020/03/wordpress配置界面.png)
+
+wordpress配置界面
+
+填好必要的信息，点击下方的“安装WordPress”，恭喜你，属于你的博客就搭建好了！接下来尽情折腾博客，开始你的写文章之旅吧！
+
+其他
+--
+
+1\. 使用tomcat、Ghost、Hugo、Huxo等技术建站，最简单的方式就是让程序监听80和443以外的端口，然后把第28行 `proxy_pass xxxx` 改成 `proxy_pass http://localhost:后端端口`；
+
+2\. 运行wordpress脚本后，v2ray也能正常使用，不会受到影响；
+
+3\. 其他问题请到 [网络跳越论坛](https://hijk.club) 反馈。
+
+文章最后修改日期：2020年3月29日
+
+
+
